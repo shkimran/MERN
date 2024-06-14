@@ -3,16 +3,16 @@ const app = express();
 const port = 5000;
 
 
-// Middleware to parse JSON bodies
+//*** */ Middleware to parse JSON bodies 
 app.use(express.json());
 
-// Import routes
+//*** */ Import routes
 const indexRouter = require('./router/auth-router');
 
-// Use routes
+//*** */ Use routes
 app.use('/', indexRouter);
 
-// Start the server
+//*** */ Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
